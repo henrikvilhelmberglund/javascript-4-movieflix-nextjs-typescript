@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <section>
         <h1>Välkommen till MovieFlix!</h1>
-        <p>Vi erbjuder de senaste filmerna och TV-serierna</p>
+        <p role="paragraph">Vi erbjuder de senaste filmerna och TV-serierna</p>
       </section>
     </>
   );

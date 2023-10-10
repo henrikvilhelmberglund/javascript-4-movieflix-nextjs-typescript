@@ -7,13 +7,20 @@ describe("homepage", () => {
     render(<Home />);
     const heading = screen.getByRole("heading", {
       name: /välkommen till movieflix/i,
-      level: 1
+      level: 1,
     });
     expect(heading).toBeInTheDocument();
   });
-  it("has a introductary text string", () => {
+  // it("has a text 'Vi erbjuder de senaste filmerna och tv-serierna'", () => {
+  //   render(<Home />);
+  //   const text = screen.getByText(/vi erbjuder de senaste filmerna och tv-serierna/i)
+  //   expect(text).toBeInTheDocument();
+  // } )
+  it("has a text 'Vi erbjuder de senaste filmerna och tv-serierna'", () => {
     render(<Home />);
-    const text = screen.getByText(/vi erbjuder de senaste filmerna och tv-serierna/i)
-    expect(text).toBeInTheDocument();
-  } )
+    const text = screen.getByRole("paragraph");
+    expect(text).toHaveTextContent(
+      /vi erbjuder de senaste filmerna och tv-serierna/i
+    );
+  });
 });
