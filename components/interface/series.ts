@@ -1,0 +1,3 @@
+interface Series {
+  series: Serie[];
+}
